@@ -1,5 +1,4 @@
 package com.im.assignments.weektwodaytwo;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -13,22 +12,21 @@ public class CommandLineAdd {
 		System.out.println("Enter as many numbers as you can, and the program will add them all up");
 		Scanner sc = new Scanner(System.in);
 		// Initialize sum and count of input elements 
-        int sum = 0;
-        int num = 0; 
+        double sum = 0;
+        double num = 0; 
   
-        
         while (num != -1){
             try {
-                num=Integer.parseInt(sc.nextLine());
+                num=Double.parseDouble(sc.nextLine());
                 sum+=num;
             }
-            //catch any input that is not an integer
+            //catch any input that is not an double
             catch(NumberFormatException e){
-                System.out.println("That is not an integer, please try again." );
+                System.out.println("That is not an double, please try again." );
             }
             //finally testing
             finally {
-            	System.out.println("Finally Testing");
+            	System.out.println("\"Finally\" Testing");
             }
         }
         
@@ -36,3 +34,4 @@ public class CommandLineAdd {
         
 	}
 }
+
